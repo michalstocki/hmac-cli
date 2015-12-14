@@ -8,12 +8,22 @@ I made this to quickly create and verify hashed message authentication codes
 ```
 $ git clone git@github.com:thinaire/hmac-cli.git
 $ cd hmac-cli
+```
+
+### Create HMAC
+
+```
 hmac-cli$ export CONTENT_HMAC=MY_SECRET_KEY
 hmac-cli$ node hmac 'Message to Hash' MY_SECRET_KEY
 
 HMAC:
 NqLxyz53OE9dmNrDTlAdk2dXBAjStft1GYCMNEQ9w6Y=
 
+```
+
+### Verify HMAC
+
+```
 hmac-cli$ node verify 'Message to Hash' NqLxyz53OE9dmNrDTlAdk2dXBAjStft1GYCMNEQ9w6Y=
 
 
